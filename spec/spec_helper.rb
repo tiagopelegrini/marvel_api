@@ -1,4 +1,5 @@
 require 'httparty'
+require 'json-schema'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

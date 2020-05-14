@@ -1,78 +1,204 @@
 {
-    "code": "int",
-    "status": "string",
-    "copyright": "string",
-    "attributionText": "string",
-    "attributionHTML": "string",
-    "data": {
-      "offset": "int",
-      "limit": "int",
-      "total": "int",
-      "count": "int",
-      "results": [
-        {
-          "id": "int",
-          "name": "string",
-          "description": "string",
-          "modified": "Date",
-          "resourceURI": "string",
-          "urls": [
-            {
-              "type": "string",
-              "url": "string"
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "number"
+        },
+        "status": {
+            "type": "string"
+        },
+        "copyright": {
+            "type": "string"
+        },
+        "attributionText": {
+            "type": "string"
+        },
+        "attributionHTML": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "offset": {
+                    "type": "int"
+                },
+                "limit": {
+                    "type": "int"
+                },
+                "total": {
+                    "type": "int"
+                },
+                "count": {
+                    "type": "int"
+                },
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "int"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "modified": {
+                                "type": "date-time"
+                            },
+                            "resourceURI": {
+                                "type": "string"
+                            },
+                            "urls": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "thumbnail": {
+                                "type": "object",
+                                "properties": {
+                                    "path": {
+                                        "type": "string"
+                                    },
+                                    "extension": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "comics": {
+                                "type": "object",
+                                "properties": {
+                                    "available": {
+                                        "type": "int"
+                                    },
+                                    "returned": {
+                                        "type": "int"
+                                    },
+                                    "collectionURI": {
+                                        "type": "string"
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resourceURI": {
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "stories": {
+                                "type": "object",
+                                "properties": {
+                                    "available": {
+                                        "type": "int"
+                                    },
+                                    "returned": {
+                                        "type": "int"
+                                    },
+                                    "collectionURI": {
+                                        "type": "string"
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resourceURI": {
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "events": {
+                                "type": "object",
+                                "properties": {
+                                    "available": {
+                                        "type": "int"
+                                    },
+                                    "returned": {
+                                        "type": "int"
+                                    },
+                                    "collectionURI": {
+                                        "type": "string"
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resourceURI": {
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "series": {
+                                "type": "object",
+                                "properties": {
+                                    "available": {
+                                        "type": "int"
+                                    },
+                                    "returned": {
+                                        "type": "int"
+                                    },
+                                    "collectionURI": {
+                                        "type": "string"
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "title": "Items",
+                                            "type": "object",
+                                            "properties": {
+                                                "resourceURI": {
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-          ],
-          "thumbnail": {
-            "path": "string",
-            "extension": "string"
-          },
-          "comics": {
-            "available": "int",
-            "returned": "int",
-            "collectionURI": "string",
-            "items": [
-              {
-                "resourceURI": "string",
-                "name": "string"
-              }
-            ]
-          },
-          "stories": {
-            "available": "int",
-            "returned": "int",
-            "collectionURI": "string",
-            "items": [
-              {
-                "resourceURI": "string",
-                "name": "string",
-                "type": "string"
-              }
-            ]
-          },
-          "events": {
-            "available": "int",
-            "returned": "int",
-            "collectionURI": "string",
-            "items": [
-              {
-                "resourceURI": "string",
-                "name": "string"
-              }
-            ]
-          },
-          "series": {
-            "available": "int",
-            "returned": "int",
-            "collectionURI": "string",
-            "items": [
-              {
-                "resourceURI": "string",
-                "name": "string"
-              }
-            ]
-          }
+        },
+        "etag": {
+            "type": "string"
         }
-      ]
-    },
-    "etag": "string"
-  }
+    }
+}
