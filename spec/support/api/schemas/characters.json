@@ -20,16 +20,16 @@
             "type": "object",
             "properties": {
                 "offset": {
-                    "type": "int"
+                    "type": "number"
                 },
                 "limit": {
-                    "type": "int"
+                    "type": "number"
                 },
                 "total": {
-                    "type": "int"
+                    "type": "number"
                 },
                 "count": {
-                    "type": "int"
+                    "type": "number"
                 },
                 "results": {
                     "type": "array",
@@ -37,7 +37,7 @@
                         "type": "object",
                         "properties": {
                             "id": {
-                                "type": "int"
+                                "type": "number"
                             },
                             "name": {
                                 "type": "string"
@@ -80,10 +80,10 @@
                                 "type": "object",
                                 "properties": {
                                     "available": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "returned": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "collectionURI": {
                                         "type": "string"
@@ -108,10 +108,10 @@
                                 "type": "object",
                                 "properties": {
                                     "available": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "returned": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "collectionURI": {
                                         "type": "string"
@@ -139,10 +139,10 @@
                                 "type": "object",
                                 "properties": {
                                     "available": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "returned": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "collectionURI": {
                                         "type": "string"
@@ -167,10 +167,10 @@
                                 "type": "object",
                                 "properties": {
                                     "available": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "returned": {
-                                        "type": "int"
+                                        "type": "number"
                                     },
                                     "collectionURI": {
                                         "type": "string"
