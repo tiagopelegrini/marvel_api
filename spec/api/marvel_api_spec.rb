@@ -1,8 +1,10 @@
 require_relative '../../lib/api/marvel_requests/characters.rb'
+require_relative '../utils/id_character.rb'
 
 describe 'characters' do
     before(:all) do
       @request = Characters.new 
+      @id_character = IdCharacter.new
     end
   context 'list 5 characters' do
     it 'get 5 characters' do
@@ -10,6 +12,15 @@ describe 'characters' do
 
       expect(get_characters_response.code).to eq(200)
       expect(get_characters_response).to match_response_schema('characters')
+    end
+  end
+
+  context 'get specific user' do
+    it 'get character' do
+      get_ids = @id_character.get_id_character.first
+      get_user  = @request.get_one_character(get_ids)
+      expect(get_user.code).to eq(200)
+      expect(get_user).to match_response_schema('character')
     end
   end
 end
