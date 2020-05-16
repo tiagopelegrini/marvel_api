@@ -6,6 +6,7 @@ describe 'characters' do
       @request = Characters.new 
       @id_character = IdCharacter.new
     end
+
   context 'list 5 characters' do
     it 'get 5 characters' do
       get_characters_response = @request.get_characters
@@ -19,8 +20,19 @@ describe 'characters' do
     it 'get character' do
       get_ids = @id_character.get_id_character.first
       get_user  = @request.get_one_character(get_ids)
+      
       expect(get_user.code).to eq(200)
       expect(get_user).to match_response_schema('character')
     end
   end
+
+  context 'get specific comics' do
+    it 'get_comics' do
+      get_ids = @id_character.get_id_character.first
+      get_comics  = @request.get_comics(get_ids)
+      
+      expect(get_comics.code).to eq(200)
+      expect(get_comics).to match_response_schema('comics')
+    end
+  end  
 end
