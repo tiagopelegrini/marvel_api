@@ -55,7 +55,8 @@
                                 "type": ["string", "null"]
                             },
                             "modified": {
-                                "type": "string"
+                                "type": "string",            
+                                "format": "date"
                             },
                             "isbn": {
                                 "type": "string"
@@ -179,7 +180,8 @@
                                             "type": "string"
                                         },
                                         "date": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "format": "date"
                                         }
                                     }
                                 }
