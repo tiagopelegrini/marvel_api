@@ -46,16 +46,16 @@
                                 "type": "string"
                             },
                             "issueNumber": {
-                                "type": "numberdouble"
+                                "type": "number"
                             },
                             "variantDescription": {
                                 "type": "string"
                             },
                             "description": {
-                                "type": "string"
+                                "type": ["string", "null"]
                             },
                             "modified": {
-                                "type": "Date"
+                                "type": "string"
                             },
                             "isbn": {
                                 "type": "string"
@@ -179,7 +179,7 @@
                                             "type": "string"
                                         },
                                         "date": {
-                                            "type": "Date"
+                                            "type": "string"
                                         }
                                     }
                                 }
@@ -194,7 +194,7 @@
                                             "type": "string"
                                         },
                                         "price": {
-                                            "type": "float"
+                                            "type": "number"
                                         }
                                     }
                                 }
@@ -279,6 +279,9 @@
                                                     "type": "string"
                                                 },
                                                 "name": {
+                                                    "type": "string"
+                                                },
+                                                "role": {
                                                     "type": "string"
                                                 }
                                             }
