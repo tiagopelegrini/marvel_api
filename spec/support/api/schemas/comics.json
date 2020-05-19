@@ -52,7 +52,7 @@
                                 "type": "string"
                             },
                             "description": {
-                                "type": ["string", "null"]
+                                "type": ["string"]
                             },
                             "modified": {
                                 "type": "string",            
