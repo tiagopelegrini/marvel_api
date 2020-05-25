@@ -8,6 +8,7 @@ group :test do
 end
 group :ruby_config_vs_code do
   gem "rcodetools", "0.8.5.0"
+  gem "fastri", "0.3.1.1"
   gem "ruby-debug-ide", "0.7.2"
   gem "debase", "0.2.4.1"
   gem "rufo", "0.12.0"
