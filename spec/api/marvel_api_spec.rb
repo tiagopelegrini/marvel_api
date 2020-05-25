@@ -1,38 +1,38 @@
-require_relative "../../lib/api/marvel_requests/characters.rb"
-require_relative "../utils/id_character.rb"
+require_relative '../../lib/api/marvel_requests/characters.rb'
+require_relative '../utils/id_character.rb'
 
-describe "characters" do
+describe '.characters' do
   before(:all) do
     @request = Characters.new
     @id_character = IdCharacter.new
   end
 
-  context "list 5 characters" do
-    it "get 5 characters" do
+  context 'list 5 characters' do
+    it 'get 5 characters' do
       get_characters_response = @request.get_characters
 
       expect(get_characters_response.code).to eq(200)
-      expect(get_characters_response).to match_response_schema("characters")
+      expect(get_characters_response).to match_response_schema('characters')
     end
   end
 
-  context "get specific user" do
-    it "get character" do
-      get_ids = @id_character.get_id_character.sample
+  context 'get specific character' do
+    it 'get character' do
+      get_ids = @id_character.sample_id_character
       get_user = @request.get_one_character(get_ids)
 
       expect(get_user.code).to eq(200)
-      expect(get_user).to match_response_schema("character")
+      expect(get_user).to match_response_schema('character')
     end
   end
 
-  context "get specific comics" do
-    it "get_comics" do
-      get_ids = @id_character.get_id_character.sample
+  context 'get specific comics' do
+    it 'get_comics' do
+      get_ids = @id_character.sample_id_character
       get_comics = @request.get_comics(get_ids)
 
       expect(get_comics.code).to eq(200)
-      expect(get_comics).to match_response_schema("comics")
+      expect(get_comics).to match_response_schema('comics')
     end
   end
 end
