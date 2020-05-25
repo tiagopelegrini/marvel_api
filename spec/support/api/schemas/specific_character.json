@@ -48,7 +48,8 @@
                                 "type": "string"
                             },
                             "modified": {
-                                "type": "date-time"
+                                "type": "string",            
+                                "format": "date"
                             },
                             "resourceURI": {
                                 "type": "string"

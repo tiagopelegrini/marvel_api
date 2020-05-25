@@ -7,8 +7,8 @@ describe '.characters' do
     @id_character = IdCharacter.new
   end
 
-  context 'list 5 characters' do
-    it 'get 5 characters' do
+  context 'should list 5 characters' do
+    it 'get characters' do
       get_characters_response = @request.get_characters
 
       expect(get_characters_response.code).to eq(200)
@@ -16,17 +16,17 @@ describe '.characters' do
     end
   end
 
-  context 'get specific character' do
-    it 'get character' do
+  context 'should list specific character' do
+    it 'get specific character' do
       get_ids = @id_character.sample_id_character
       get_user = @request.get_one_character(get_ids)
 
       expect(get_user.code).to eq(200)
-      expect(get_user).to match_response_schema('character')
+      expect(get_user).to match_response_schema('specific_character')
     end
   end
 
-  context 'get specific comics' do
+  context 'should list comics of the characters' do
     it 'get_comics' do
       get_ids = @id_character.sample_id_character
       get_comics = @request.get_comics(get_ids)
